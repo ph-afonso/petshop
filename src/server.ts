@@ -4,6 +4,9 @@ import dotenv from 'dotenv';
 import mustache from 'mustache-express';
 import path from 'path';
 
+//Import Rotas
+import mainRouters from './routes/index';
+
 //Configuração da porta: Dotenv
 dotenv.config();
 
@@ -19,6 +22,12 @@ server.engine('mustache', mustache());
 server.use(express.static(path.join(__dirname, '../public')));
 
 //Rotas
+server.use(mainRouters);
+
+//Rota 404
+server.use((req, res)=>{
+    res.send('Página não encontrada');
+});
 
 //Configuração da porta de acesso do servidor
 server.listen(process.env.PORT);
