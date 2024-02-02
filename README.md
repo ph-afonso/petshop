@@ -13,3 +13,7 @@ Projeto Node + Typescript
 ### Para rodar o projeto
 
 `npm run start-dev`
+
+### Projeto no ar
+
+https://gleaming-puce-pantyhose.cyclic.app
