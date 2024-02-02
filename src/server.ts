@@ -26,7 +26,7 @@ server.use(mainRouters);
 
 //Rota 404
 server.use((req, res)=>{
-    res.send('Página não encontrada');
+    res.render('pages/404');
 });
 
 //Configuração da porta de acesso do servidor
